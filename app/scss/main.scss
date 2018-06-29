@@ -1,0 +1,42 @@
+@import 'constants.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $col-docBG;
+  color: white;
+}
+
+.container {
+  max-width: 1024px;
+  width: 80%;
+  background: $col-contBG;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+.divCol_1 {
+  background: $col-divCol_1;
+}
+
+.divCol_2 {
+  background: $col-divCol_2;
+}
+
+.divCol_3 {
+  background: $col-divCol_3;
+}
+
+.divCol_4 {
+  background: $col-divCol_4;
+}
+
+/*.divCol_5 {
+  background: #00b300;
+}*/
+
+

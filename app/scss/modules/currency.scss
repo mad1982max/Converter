@@ -1,0 +1,23 @@
+@import '../constants.scss';
+
+label {
+  display: block;
+  border-bottom: 3px solid $col-docBG;
+  text-align: center;
+  padding: 10px 0;
+
+}
+
+.labelName, input {
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.labelName {
+  width: 50px;
+  text-align: center;
+  //border: 1px solid yellow;
+  //background: $col-docBG;
+  //color: $col-divCol_1;
+}
