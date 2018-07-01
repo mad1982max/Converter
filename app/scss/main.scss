@@ -14,25 +14,32 @@ body {
 .container {
   max-width: 1024px;
   width: 80%;
-  background: $col-contBG;
   margin: 10px auto;
   border-radius: 4px;
 }
 
-.divCol_1 {
+.color0 {
   background: $col-divCol_1;
+  border-color: $col-divCol_1;
+  border-style: solid;
 }
 
-.divCol_2 {
+.color1 {
   background: $col-divCol_2;
+  border-color: $col-divCol_2;
+  border-style: solid;
 }
 
-.divCol_3 {
+.color2 {
   background: $col-divCol_3;
+  border-color: $col-divCol_3;
+  border-style: solid;
 }
 
-.divCol_4 {
+.color3 {
   background: $col-divCol_4;
+  border-color: $col-divCol_4;
+  border-style: solid;
 }
 
 /*.divCol_5 {

@@ -3,14 +3,29 @@ import Link from 'react-router-dom/Link';
 import '../../scss/modules/nav.scss';
 
 export default class Nav extends React.Component {
+    constructor(props) {
+        super(props);
+        this.changeBorder = this.changeBorder.bind(this);
+    }
+
+    changeBorder(e) {
+        let colorClass = e.target.className;
+        let navCont = document.querySelector('nav');
+        navCont.className = colorClass;
+        navCont.style.borderTopWidth = '10px';
+        navCont.style.borderBottomWidth = '10px';
+    }
+
     render() {
+        let navValArr = ['currency', 'length', 'weight', 'volume'];
+        let colorBGClass = 'color';
         return (
             <div>
                 <nav>
-                    <Link to = '/currency' className = "divCol_1 ">Currency</Link>
-                    <Link to = '/length' className = "divCol_2 ">Length</Link>
-                    <Link to = '/weight' className = "divCol_3 ">Weight</Link>
-                    <Link to = '/volume' className = "divCol_4 ">Volume</Link>
+                    {navValArr.map((item, i) => {
+                        return <Link key = {item.concat(i)} to = {'/'+item} className = {colorBGClass + i} onClick={this.changeBorder}>{item}</Link>
+                    })}
+
                 </nav>
             </div>
         )

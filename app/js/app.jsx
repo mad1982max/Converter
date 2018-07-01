@@ -14,6 +14,7 @@ import CurrenciesContainer from './components/CurrenciesContainer.jsx';
 
 class App extends React.Component {
     render() {
+        let opt = 5;
         return (
             <Router>
                 <div className = 'container'>
@@ -21,7 +22,8 @@ class App extends React.Component {
                     <Nav />
                     <Switch>
                         <Route path="/currency" component={CurrenciesContainer} />
-                        <Route path="/length" component={Length} />
+                        <Route path="/length" render = {() => <Length num = {opt}/>} />
+
                     </Switch>
                 </div>
             </Router>

@@ -36,6 +36,7 @@ export default class Currencies extends React.Component {
         const unit = this.state.unit;
         const val = this.state.val;
 
+
         return(
             <div className = 'mainCont'>
                 {arrCurr.map((item, i) => {
