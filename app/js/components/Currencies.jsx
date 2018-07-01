@@ -19,7 +19,6 @@ export default class Currencies extends React.Component {
 
     convert(mainCurr, currentCurr, val) {
         if (this.state.unit !== '') {
-            console.log(this.props.curExchObj.quotes);
             let currRatObj = this.props.curExchObj.quotes;
             let ratio1 = currRatObj['USD'.concat(mainCurr)];
             let ratio2 = currRatObj['USD'.concat(currentCurr)];

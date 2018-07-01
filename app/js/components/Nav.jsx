@@ -17,7 +17,7 @@ export default class Nav extends React.Component {
     }
 
     render() {
-        let navValArr = ['currency', 'length', 'weight', 'volume'];
+        let navValArr = ['currency', ...this.props.navSectArr];
         let colorBGClass = 'color';
         return (
             <div>

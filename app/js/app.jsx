@@ -9,21 +9,26 @@ import '../scss/main.scss';
 
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
-import Length from './components/Length.jsx';
 import CurrenciesContainer from './components/CurrenciesContainer.jsx';
+import OtherChaptContainer from './components/otherChaptContainer.jsx';
+
+import {dataConvert, navSectArr} from "./dataConvert.jsx";
+
+
 
 class App extends React.Component {
     render() {
-        let opt = 5;
+
         return (
             <Router>
                 <div className = 'container'>
                     <Header />
-                    <Nav />
+                    <Nav navSectArr = {navSectArr} />
                     <Switch>
                         <Route path="/currency" component={CurrenciesContainer} />
-                        <Route path="/length" render = {() => <Length num = {opt}/>} />
-
+                        {navSectArr.map((item, i) => {
+                            return <Route path = {'/'+ item} key = {item.concat(i)} render = {() => <OtherChaptContainer dataConvert = {dataConvert[item]} />} />
+                        })}
                     </Switch>
                 </div>
             </Router>
