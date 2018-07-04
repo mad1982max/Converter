@@ -2,7 +2,7 @@
 
 STEPS:
 
-    $ git clone
+    $ git clone https://github.com/mad1982max/Converter-on-React.git
   
     $ npm i
   
