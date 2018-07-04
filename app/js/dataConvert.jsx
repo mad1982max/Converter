@@ -1,4 +1,9 @@
 const dataConvert = {
+    currency: {
+        url: 'http://www.apilayer.net/api/live?access_key=5706b7d9e84a05cfaf5a763575cab5bb',
+        currencies: ['USD', 'UAH', 'EUR', 'CHF', 'RUB', 'JPY', 'GBP'],
+        mainCurrency: 'USD'
+    },
     weight: {
         g_g: 1,
         g_lb: 0.0022046,
@@ -7,7 +12,6 @@ const dataConvert = {
         g_ct: 5,
         g_toz: 0.032151
     },
-
     length: {
         m_m: 1,
         m_km: 0.001,
@@ -15,7 +19,6 @@ const dataConvert = {
         m_in: 39.37,
         m_yd: 1.0936
     },
-
     volume: {
         l_l: 1,
         l_m3: 0.001,
@@ -25,8 +28,6 @@ const dataConvert = {
         'l_gal. lqd': 0.26417
     }
 };
-
-
 const  navSectArr = Object.keys(dataConvert);
-
-export {dataConvert, navSectArr};
+const currencyQueryObj = dataConvert.currency;
+export {dataConvert, navSectArr, currencyQueryObj};

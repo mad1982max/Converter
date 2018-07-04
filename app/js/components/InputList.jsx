@@ -1,15 +1,10 @@
 import React from 'react';
-import '../../scss/modules/currency.scss';
+import '../../scss/modules/inputUnit.scss';
 
-export default class Currency extends React.Component {
+export default class InputList extends React.Component {
     constructor(props) {
         super(props);
         this.onChange = this.onChange.bind(this);
-        this.validateValue = this.validateValue.bind(this);
-    }
-
-    validateValue(val) {
-        return !isNaN(parseFloat(val)) && isFinite(val);
     }
 
     onChange(e) {
@@ -19,10 +14,12 @@ export default class Currency extends React.Component {
     }
 
     render() {
-        const unit = this.props.unit;
-        const val = this.props.val;
-        return (
-            <div className = 'inputCont'>
+        let unit = this.props.unit;
+        const val = this.props.value;
+        let colorClass = document.querySelector('nav').className;
+
+        return(
+            <div className = {`inputCont ` + colorClass}>
                 <label><div className = 'labelName'>{unit}</div><input type = 'text' value={val} onChange={this.onChange}/></label>
             </div>
         )

@@ -3,21 +3,23 @@
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  //border: 1px solid white;
-  //background: $col-navBG;
-  //margin-bottom: 150px;
-  border-top: 10px solid $col-contBG;
-  border-bottom: 10px solid $col-contBG;
+  justify-content: center;
+  //background: red;
+  height: 60px;
 }
 
 a {
+  display: inline-block;
+  align-items: center;
   text-decoration: none;
   outline: none;
-  padding: 10px;
+  margin: auto;
   color: white;
   font-size: 20px;
+  line-height: 40px;
   width: 25%;
   text-align: center;
+  //background: lightseagreen;
+  height: 40px;
 }
 

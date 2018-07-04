@@ -1,31 +1,23 @@
 import React from 'react';
 import Link from 'react-router-dom/Link';
 import '../../scss/modules/nav.scss';
+import '../../scss/main.scss';
 
 export default class Nav extends React.Component {
-    constructor(props) {
-        super(props);
-        this.changeBorder = this.changeBorder.bind(this);
-    }
-
-    changeBorder(e) {
+    addNavItemColor(e) {
         let colorClass = e.target.className;
         let navCont = document.querySelector('nav');
         navCont.className = colorClass;
-        navCont.style.borderTopWidth = '10px';
-        navCont.style.borderBottomWidth = '10px';
     }
 
     render() {
-        let navValArr = ['currency', ...this.props.navSectArr];
-        let colorBGClass = 'color';
+        let navValArr = this.props.navSectArr;
         return (
             <div>
                 <nav>
                     {navValArr.map((item, i) => {
-                        return <Link key = {item.concat(i)} to = {'/'+item} className = {colorBGClass + i} onClick={this.changeBorder}>{item}</Link>
+                        return <Link key = {item.concat(i)} to = {'/'+item} className = {'color_' + i} onClick={this.addNavItemColor}>{item}</Link>
                     })}
-
                 </nav>
             </div>
         )

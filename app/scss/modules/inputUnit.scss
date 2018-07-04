@@ -5,19 +5,24 @@ label {
   border-bottom: 3px solid $col-docBG;
   text-align: center;
   padding: 10px 0;
+}
+
+label:last-child {
+  //border: none;
+  //margin-bottom: 0;
+  //border: 5px solid grey;
 
 }
+
 
 .labelName, input {
   display: inline-block;
   font-size: 20px;
-  margin: 10px;
+  margin: 15px;
 }
 
 .labelName {
-  width: 50px;
+  width: 60px;
   text-align: center;
-  //border: 1px solid yellow;
-  //background: $col-docBG;
-  //color: $col-divCol_1;
+
 }
